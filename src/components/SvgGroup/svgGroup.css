@@ -1,0 +1,154 @@
+.svgGroup {
+    position: relative;
+    height: 510px;
+}
+
+.svgGroup #part1 {
+    position: absolute;
+    top: 0;
+    left: 66px;
+}
+
+.svgGroup #part2 {
+    position: absolute;
+    top: 101px;
+    left: 59px;
+}
+
+.svgGroup #part3 {
+    position: absolute;
+    top: 49px;
+    left: 0;
+}
+
+.svgGroup #part4 {
+    position: absolute;
+    top: 41px;
+    right: 57px;
+    animation: paperPlaneAnimation ease-in-out 4s infinite;
+    animation-delay: 0s;
+}
+
+.svgGroup #part5 {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    animation: mailAnimation ease-in-out 4s infinite;
+}
+
+.svgGroup #part6 {
+    position: absolute;
+    top: 112px;
+    right: 134px;
+    animation: planeTrailAnimation ease-in-out 4s infinite;
+    transform-origin: bottom left;
+    animation-delay: 0s;
+}
+
+.svgGroup #part7 {
+    position: absolute;
+    top: 120px;
+    right: 31px;
+    animation: calendarAnimation ease-in-out 4s infinite;
+    animation-delay: 0s;
+}
+
+.svgGroup #part8 {
+    position: absolute;
+    top: 234px;
+    right: 0;
+    animation: paperAnimation ease-in-out 4s infinite;
+    animation-delay: 0s;
+}
+
+.svgGroup #part9 {
+    position: absolute;
+    bottom: 64px;
+    right: 24px;
+    animation: tabletAnimation ease-in-out 4s infinite;
+    animation-delay: 0s;
+}
+
+.svgGroup #part10 {
+    position: absolute;
+    bottom: 26px;
+    left: 33px;
+}
+
+.svgGroup #part11 {
+    position: absolute;
+    bottom: 15px;
+    left: 131px;
+}
+
+@keyframes paperPlaneAnimation {
+    0% {
+        transform: translate(10px, 0);
+    }
+    50% {
+        transform: translate(0, 10px) rotate(5deg);
+    }
+    100% {
+        transform: translate(10px, 0);
+    }
+}
+
+@keyframes mailAnimation {
+    0% {
+        transform: translate(0, 10px);
+    }
+    50% {
+        transform: translate(2px, 0) rotate(3deg);
+    }
+    100% {
+        transform: translate(0, 10px);
+    }
+}
+
+@keyframes planeTrailAnimation {
+    0% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes calendarAnimation {
+    0% {
+        transform: translate(0, 5px);
+    }
+    50% {
+        transform: translate(2px, 0) rotate(-3deg);
+    }
+    100% {
+        transform: translate(0, 5px);
+    }
+}
+
+@keyframes paperAnimation {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0px, 6px) rotate(-2deg);
+    }
+    100% {
+        transform: translate(0, 0px);
+    }
+}
+
+@keyframes tabletAnimation {
+    0% {
+        transform: translate(0, 5px);
+    }
+    50% {
+        transform: translate(2px, 0px);
+    }
+    100% {
+        transform: translate(0, 5px);
+    }
+}

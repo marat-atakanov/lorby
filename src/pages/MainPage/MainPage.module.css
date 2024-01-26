@@ -1,0 +1,108 @@
+.mainPage {
+    height: 100vh;
+}
+
+.mainPageInner {
+    height: 100vh;
+    margin: 0 auto;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.greeting {
+    color: #212121;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.mainPageInner p {
+    margin: 8px 0 40px;
+    color: #212121;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.mainPageInner span {
+    margin: 53px auto;
+    color:#292929;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.modalBg {
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.52);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalWindow {
+    padding: 32px;
+    width: 375px;
+    height: 274px;
+    background-color: #fff;
+    border-radius: 32px;
+}
+
+.modalWindow p:nth-of-type(1) {
+    color: #212121;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.modalWindow p:nth-of-type(2) {
+    margin-top: 24px;
+    color: #767676;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/*.modalWindow button {*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.modalWindow button:hover {*/
+/*    filter: brightness(1.5);*/
+/*}*/
+
+/*.modalWindow button:active {*/
+/*    filter: brightness(0.8);*/
+/*}*/
+
+/*.modalWindow button:nth-of-type(1) {*/
+/*    width: 100%;*/
+/*    padding: 13px 16px;*/
+/*    margin-top: 24px;*/
+/*    color: #ffffff;*/
+/*    text-align: center;*/
+/*    font-size: 16px;*/
+/*    font-weight: 500;*/
+/*    border-radius: 12px;*/
+/*    background-color: #292929;*/
+/*    border: none;*/
+/*}*/
+
+/*.modalWindow button:nth-of-type(2) {*/
+/*    width: 100%;*/
+/*    padding: 13px 16px;*/
+/*    margin-top: 8px;*/
+/*    color: black;*/
+/*    text-align: center;*/
+/*    font-size: 16px;*/
+/*    font-weight: 500;*/
+/*    border-radius: 12px;*/
+/*    background-color: white;*/
+/*    border: none;*/
+/*}*/

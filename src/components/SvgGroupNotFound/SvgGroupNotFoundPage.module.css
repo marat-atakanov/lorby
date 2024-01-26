@@ -1,0 +1,23 @@
+.svgGroup {
+    position: relative;
+    height: 340px;
+    width: 300px;
+}
+
+.part1 {
+    width: 300px;
+}
+
+.part2 {
+    width: 121px;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+.part3 {
+    width: 55px;
+    position: absolute;
+    bottom: 74px;
+    left: 48px;
+}

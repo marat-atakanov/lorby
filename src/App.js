@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Layout from "./pages/Layout/Layout";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Registration from "./components/Register/Registration";
+import Login from "./components/Login/Login";
+import Verification from "./components/Verification/Verification";
+import MainPage from "./pages/MainPage/MainPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Layout/>}>
+                    <Route index element={<Login/>} />
+                    <Route path="/register" element={<Registration/>} />
+                    <Route path="/verification" element={<Verification/>}/>
+                </Route>
+                <Route path="/main" element={<MainPage/>}/>
+                <Route path="*" element={<NotFoundPage/>}/>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;
