@@ -48,7 +48,7 @@
     }
 
     .leftBlock h1 {
-        font-size: 33px;
+        font-size: 36px;
     }
 
     .leftBlock p {
@@ -62,7 +62,7 @@
     }
 
     .leftBlock h1 {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .leftBlock p {
@@ -71,20 +71,28 @@
 }
 
 @media only screen and (max-width: 775px) {
+    .layout {
+        display: flex;
+        align-items: center;
+    }
     .layoutInner {
         width: 520px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: auto;
     }
 
-    .leftBlock h1 {
-        font-size: 20px;
+    .leftBlock {
+        width: 100%;
     }
 
+    /* .leftBlock h1 {
+        font-size: 20px;
+    } */
+/* 
     .leftBlock p {
         font-size: 14px;
-    }
+    } */
 
     .rightBlock {
         min-height: auto;
@@ -96,11 +104,11 @@
         width: 350px;
     }
 
-    .leftBlock h1 {
+    /* .leftBlock h1 {
         font-size: 18px;
     }
 
     .leftBlock p {
         font-size: 11px;
-    }
+    } */
 }
