@@ -3,82 +3,112 @@
     height: 510px;
 }
 
-.svgGroup #part1 {
+@media only screen and (max-width: 1200px) {
+    .svgGroup {
+        height: 417px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .svgGroup {
+        height: 323.85px;
+    }
+}
+
+@media only screen and (max-width: 775px) {
+    .svgGroup {
+        display: none;
+    }
+}
+
+.svgGroup #windowAndItems {
     position: absolute;
+    width: 80%;
     top: 0;
-    left: 66px;
+    left: 13.75%;
 }
 
-.svgGroup #part2 {
+.svgGroup #sittingMan {
     position: absolute;
-    top: 101px;
-    left: 59px;
+    width: 57.7%;
+    top: 19.8%;
+    /* top: 101px; */
+    left: 12.3%;
 }
 
-.svgGroup #part3 {
+.svgGroup #curvedLines {
     position: absolute;
-    top: 49px;
+    width: 91.6%;
+    top: 9.61%;
     left: 0;
 }
 
-.svgGroup #part4 {
+.svgGroup #paperPlane {
     position: absolute;
-    top: 41px;
-    right: 57px;
+    width: 22.1%;
+    top: 8%;
+    right: 11.88%;
     animation: paperPlaneAnimation ease-in-out 4s infinite;
     animation-delay: 0s;
 }
 
-.svgGroup #part5 {
+.svgGroup #mail {
     position: absolute;
-    top: 40px;
+    width: 21.45%;
+    top: 7.8%;
     left: 0;
     animation: mailAnimation ease-in-out 4s infinite;
 }
 
-.svgGroup #part6 {
+.svgGroup #planeTrail {
     position: absolute;
-    top: 112px;
-    right: 134px;
+    width: 34.38%;
+    top: 22%;
+    right: 27.9%;
     animation: planeTrailAnimation ease-in-out 4s infinite;
     transform-origin: bottom left;
     animation-delay: 0s;
 }
 
-.svgGroup #part7 {
+.svgGroup #calendar {
     position: absolute;
-    top: 120px;
-    right: 31px;
+    width: 21.25%;
+    top: 23.5%;
+    right: 6.5%;
     animation: calendarAnimation ease-in-out 4s infinite;
     animation-delay: 0s;
 }
 
-.svgGroup #part8 {
+.svgGroup #paper {
     position: absolute;
-    top: 234px;
+    width: 22.75%;
+    top: 45.89%;
     right: 0;
     animation: paperAnimation ease-in-out 4s infinite;
     animation-delay: 0s;
 }
 
-.svgGroup #part9 {
+.svgGroup #tablet {
     position: absolute;
-    bottom: 64px;
-    right: 24px;
+    width: 20.83%;
+    bottom: 12.5%;
+    right: 5%;
     animation: tabletAnimation ease-in-out 4s infinite;
     animation-delay: 0s;
 }
 
-.svgGroup #part10 {
+.svgGroup #books {
     position: absolute;
-    bottom: 26px;
-    left: 33px;
+    width: 32.29%;
+    bottom: 5.1%;
+    left: 6.88%;
 }
 
-.svgGroup #part11 {
+.svgGroup #plant {
     position: absolute;
-    bottom: 15px;
-    left: 131px;
+    width: 14.6%;
+    bottom: 2.95%;
+    left: 27.29%;
 }
 
 @keyframes paperPlaneAnimation {

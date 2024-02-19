@@ -23,16 +23,16 @@ export const ApiClient = () => {
         }
     })
 
-    const checkTokens = async () => {
-        try {
-            const response = await axios.post("https://neobook.online/lorby/authentication/login/refresh/", {refresh: tokens.refresh_token})
-            localStorage.setItem("access_token", response.data.access)
-        } catch (e) {
-            localStorage.removeItem("access_token")
-            localStorage.removeItem("refresh_token")
-            // window.location.reload()
-        }
-    }
+    // const checkTokens = async () => {
+    //     try {
+    //         const response = await axios.post("https://neobook.online/lorby/authentication/login/refresh/", {refresh: tokens.refresh_token})
+    //         localStorage.setItem("access_token", response.data.access)
+    //     } catch (e) {
+    //         localStorage.removeItem("access_token")
+    //         localStorage.removeItem("refresh_token")
+    //         // window.location.reload()
+    //     }
+    // }
 
     // Обновление access токена с refresh токеном. Перекидываем в логин страницу, если не получится обновить
     axiosInstances.interceptors.response.use(
@@ -104,7 +104,7 @@ export const ApiClient = () => {
         }
     }
 
-    return {login, logout, checkTokens, signUp, confirm}
+    return {login, logout, /*checkTokens,*/ signUp, confirm}
 }
 
 

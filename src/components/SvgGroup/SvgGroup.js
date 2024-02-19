@@ -15,17 +15,17 @@ import plant from "../../assets/images/sittingManOnWindowAndItems/plant.svg";
 function SvgGroup() {
     return (
         <div className="svgGroup" draggable="false">
-            <img draggable="false" id="part1" src={windowAndItems} alt="windowAndItems"/>
-            <img draggable="false" id="part2" src={sittingMan} alt="sittingMan"/>
-            <img draggable="false" id="part3" src={curvedLines} alt="curvedLines"/>
-            <img draggable="false" id="part4" src={paperPlane} alt="paperPlane"/>
-            <img draggable="false" id="part5" src={mail} alt="mail"/>
-            <img draggable="false" id="part6" src={planeTrail} alt="planeTrail"/>
-            <img draggable="false" id="part7" src={calendar} alt="calendar"/>
-            <img draggable="false" id="part8" src={paper} alt="paper"/>
-            <img draggable="false" id="part9" src={tablet} alt="tablet"/>
-            <img draggable="false" id="part10" src={books} alt="books"/>
-            <img draggable="false" id="part11" src={plant} alt="plant"/>
+            <img draggable="false" id="windowAndItems" src={windowAndItems} alt="windowAndItems"/>
+            <img draggable="false" id="sittingMan" src={sittingMan} alt="sittingMan"/>
+            <img draggable="false" id="curvedLines" src={curvedLines} alt="curvedLines"/>
+            <img draggable="false" id="paperPlane" src={paperPlane} alt="paperPlane"/>
+            <img draggable="false" id="mail" src={mail} alt="mail"/>
+            <img draggable="false" id="planeTrail" src={planeTrail} alt="planeTrail"/>
+            <img draggable="false" id="calendar" src={calendar} alt="calendar"/>
+            <img draggable="false" id="paper" src={paper} alt="paper"/>
+            <img draggable="false" id="tablet" src={tablet} alt="tablet"/>
+            <img draggable="false" id="books" src={books} alt="books"/>
+            <img draggable="false" id="plant" src={plant} alt="plant"/>
         </div>
     );
 }
