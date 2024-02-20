@@ -12,9 +12,9 @@ import tablet from "../../assets/images/sittingManOnWindowAndItems/tablet.svg";
 import books from "../../assets/images/sittingManOnWindowAndItems/books.svg";
 import plant from "../../assets/images/sittingManOnWindowAndItems/plant.svg";
 
-function SvgGroup() {
+function SvgGroup({displayValue = "block"}) {
     return (
-        <div className="svgGroup" draggable="false">
+        <div style={{display: displayValue}} className="svgGroup" draggable="false">
             <img draggable="false" id="windowAndItems" src={windowAndItems} alt="windowAndItems"/>
             <img draggable="false" id="sittingMan" src={sittingMan} alt="sittingMan"/>
             <img draggable="false" id="curvedLines" src={curvedLines} alt="curvedLines"/>

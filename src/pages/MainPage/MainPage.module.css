@@ -1,14 +1,15 @@
-.mainPage {
+/* .mainPage {
     height: 100vh;
-}
+} */
 
 .mainPageInner {
-    height: 100vh;
+    min-height: 100vh;
+    padding: 60px 0;
     margin: 0 auto;
     width: 420px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .greeting {
@@ -44,6 +45,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 15px;
 }
 
 .modalWindow {
@@ -68,6 +70,28 @@
     font-size: 16px;
     font-weight: 500;
 }
+
+@media only screen and (max-width: 550px) {
+    .mainPageInner {
+        width: 330px;
+        padding: 30px 10px;
+    }
+
+    .greeting {
+        font-size: 25px;
+    }
+
+    .mainPageInner p {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .mainPageInner {
+        width: 100%;
+    }
+}
+
 
 /*.modalWindow button {*/
 /*    cursor: pointer;*/

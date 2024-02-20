@@ -12,8 +12,18 @@
     margin-bottom: 14px;
 }
 
+.loginPanel {
+    width: 343px;
+}
+
+@media only screen and (max-width: 768px) {
+    .loginPanel {
+        margin-top: 60px;
+        width: 100%;
+    }
+}
+
 .loginPanel input {
-    width: 100%;
     background-color: #F8F8F8;
     border-radius: 12px;
     border: none;
@@ -23,6 +33,7 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+    width: 100%;
 }
 
 .loginPanel input:focus {
@@ -98,14 +109,22 @@
 }
 
 .notification {
+    /* position: absolute !important; */
     min-height: 54px;
     border-radius: 12px;
     border: 1px solid #EC0000;
     background: #FFF;
+    width: 100%;
 }
 
 .notificationContainer {
     position: absolute !important;
-    right: 0;
+    /* right: 0; */
     width: 343px;
+}
+
+@media only screen and (max-width: 550px) {
+    .notificationContainer {
+        width: 100%;
+    }
 }
