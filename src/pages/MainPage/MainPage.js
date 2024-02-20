@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./MainPage.module.css";
 import SvgGroup from "../../components/SvgGroup/SvgGroup";
-import Button from "../../components/Button/Button";
+import Button from "../../components/Buttons/Button";
 import { ApiClient } from "../../utils/axiosUtils";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function MainPage() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     if (
@@ -27,8 +28,13 @@ function MainPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTransition, setIsTransition] = useState(false);
+  const ref = useRef(document.querySelector("body"));
+
   const handleModal = () => {
-    setIsModalOpen(!isModalOpen);
+    setIsModalOpen((prev) => {
+        ref.current.style.overflow = !prev ? "hidden" : "auto"
+      return !prev;
+    });
     setIsTransition(true);
     setTimeout(() => setIsTransition(false), 120);
   };
@@ -57,26 +63,27 @@ function MainPage() {
         }
       >
         <div>
-          <h1 className={styles.greeting}>Добро пожаловать!</h1>
+          <h1 className={styles.greeting}>
+            {location.state.oldUser ? "С возвращением!" : "Добро пожаловать!"}
+          </h1>
           <p>Lorby - твой личный репетитор</p>
         </div>
-          <SvgGroup />
-        {/* <div> */}
-          <Button
-            type={"button"}
-            text={"Выйти"}
-            margin={"40px 0 0"}
-            lightTheme={true}
-            onClick={handleModal}
-          />
-        {/* </div> */}
+        <SvgGroup />
+        <Button
+          type={"button"}
+          text={"Выйти"}
+          margin={"40px 0 0"}
+          lightTheme={true}
+          onClick={handleModal}
+        />
       </div>
 
       <div
+        onClick={handleModal}
         className={styles.modalBg}
         style={isModalOpen ? { display: "flex" } : { display: "none" }}
       >
-        <div className={styles.modalWindow}>
+        <div className={styles.modalWindow} onClick={(e) => e.stopPropagation()}>
           <p>Выйти?</p>
           <p>Точно выйти?</p>
           <Button

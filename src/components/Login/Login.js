@@ -5,7 +5,7 @@ import showPasswordIcon from "../../assets/icons/showPasswordIcon.svg";
 import { useNavigate } from "react-router-dom";
 import { Slide, toast, ToastContainer } from "react-toastify";
 import { ApiClient } from "../../utils/axiosUtils";
-import Button from "../Button/Button";
+import Button from "../Buttons/Button";
 
 function Login() {
   const [isPasswordShown, setIsPasswordShown] = useState(false);
@@ -40,7 +40,7 @@ function Login() {
     try {
       setIsLoading(true);
       if (await ApiClient().login(username, password)) {
-        navigate("/main");
+        navigate("/main", {state: {oldUser: true}});
       } else {
         notify();
       }

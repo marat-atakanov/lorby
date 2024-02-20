@@ -1,113 +1,100 @@
 .verificationPanel {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 343px;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 343px;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .title {
-    color: #212121;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 500;
+  color: #212121;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .codeDigits {
-    margin: 44px auto 0;
-    width: 260px;
-    display: flex;
-    justify-content: space-between;
+  margin: 44px auto 0;
+  width: 260px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .codeDigit {
-    position: relative;
-    width: 56px;
-    height: 64px;
-    background-color: #F4F4F4;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 56px;
+  height: 64px;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .codeDigitError {
-    border: 1px solid #EC0000;
+  border: 1px solid #ec0000;
 }
 
 .codeDigitActive::after {
-    position: absolute;
-    content: "_";
-    bottom: 10px;
-    font-size: 20px;
-    animation: blink infinite 1s;
+  position: absolute;
+  content: "_";
+  bottom: 10px;
+  font-size: 20px;
+  animation: blink infinite 1s;
 }
 
 @keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .codeDigitChar {
-    min-width: 0;
+  min-width: 0;
 
-    color: #212121;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 24px;
+  color: #212121;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 .errorMessage {
-    margin-top: 12px;
-    height: 22px;
-    text-align: center;
-    color: #EC0000;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 22px;
+  margin-top: 12px;
+  height: 22px;
+  text-align: center;
+  color: #ec0000;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
 }
 
 .rightBlockInner {
+  display: flex;
+  gap: 68px;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .rightBlockInner {
+    gap: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .verificationPanel {
+    /* margin-top: 100px; */
+    width: 100%;
+  }
+
+  .rightBlockInner {
+    /* position: relative; */
     display: flex;
-    gap: 68px;
-    height: 100%;
-}
-
-.backBtn {
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    height: 52px;
-    border: none;
-    border-radius: 12px;
-    background-color: #FFFFFF;
-    color: #000000;
-    font-family: "M PLUS 1p", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    cursor: pointer;
-}
-
-.backBtn:hover {
-    filter: brightness(0.9);
-}
-
-.backBtn:active {
-    filter: brightness(0.8);
-}
-
-.backBtn img {
-    width: 28px;
-    height: 28px;
-    border-radius: 50px;
-    background: rgba(192, 192, 192, 0.20);
+  }
 }

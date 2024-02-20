@@ -4,10 +4,10 @@ import showPasswordIcon from "../../assets/icons/showPasswordIcon.svg";
 import styles from "./Registration.module.css"
 import {useFormik} from "formik";
 import {registrationSchema} from "../../schemas/schemas";
-import Button from "../Button/Button";
+import Button from "../Buttons/Button";
 import {ApiClient} from "../../utils/axiosUtils";
 import {useNavigate} from "react-router-dom";
-import backArrowBtn from "../../assets/icons/backArrowBtn.svg"
+import BackButton from '../Buttons/BackButton';
 
 function Registration() {
 
@@ -59,10 +59,8 @@ function Registration() {
 
     return (
         <div className={styles.rightBlockInner}>
-            <button type={"button"} className={styles.backBtn} onClick={()=>navigate(-1)}>
-                <img src={backArrowBtn} alt="back arrow button"/>
-                <span>Назад</span>
-            </button>
+            <BackButton text={"Назад"} onClick={() => navigate(-1)}/>
+            
             <form
                 onSubmit={(e) => {
                     e.preventDefault()

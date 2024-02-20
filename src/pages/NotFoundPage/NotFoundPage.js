@@ -2,7 +2,7 @@ import React from 'react';
 import SvgGroupNotFound from "../../components/SvgGroupNotFound/SvgGroupNotFound";
 import styles from "./NotFoundPage.module.css"
 import {Link, useNavigate} from "react-router-dom";
-import Button from "../../components/Button/Button";
+import Button from "../../components/Buttons/Button";
 
 function NotFoundPage() {
     const navigate = useNavigate()

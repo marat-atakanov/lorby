@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import styles from "./Verification.module.css"
-import Button from "../Button/Button";
+import Button from "../Buttons/Button";
 import {ApiClient} from "../../utils/axiosUtils";
 import backArrowBtn from "../../assets/icons/backArrowBtn.svg";
+import BackButton from '../Buttons/BackButton';
 
 function Verification() {
     const location = useLocation();
@@ -49,10 +50,7 @@ function Verification() {
 
     return (
         <div className={styles.rightBlockInner}>
-            <button type={"button"} className={styles.backBtn} onClick={()=>navigate(-1)}>
-                <img src={backArrowBtn} alt="back arrow button"/>
-                <span>Назад</span>
-            </button>
+            <BackButton text="Назад" onClick={() => navigate(-1)}/>
             <div className={styles.verificationPanel}>
                 <h2 className={styles.title}>Введи 4-значный код, высланный
                     на {location?.state?.emailValue ? location.state.emailValue : "почту"}</h2>
