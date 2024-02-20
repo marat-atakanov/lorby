@@ -23,12 +23,12 @@ function Registration() {
     const onSubmit = async () => {
         setIsLoading(true)
         if (await ApiClient().signUp(values.email, values.username, values.password, values.confirmPassword)) {
-            await navigate("/verification", {state: {emailValue: values.email}})
+            navigate("/verification", {state: {emailValue: values.email}})
         } else {
             setErrorMessage("Пользователь с такой почтой или логином уже существует")
         }
 
-        await setIsLoading(false)
+        setIsLoading(false)
     }
 
     const {values, errors, handleChange, touched, handleBlur, handleSubmit} = useFormik({
