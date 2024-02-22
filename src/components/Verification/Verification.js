@@ -3,7 +3,6 @@ import {Link, useLocation, useNavigate} from "react-router-dom";
 import styles from "./Verification.module.css"
 import Button from "../Buttons/Button";
 import {ApiClient} from "../../utils/axiosUtils";
-import backArrowBtn from "../../assets/icons/backArrowBtn.svg";
 import BackButton from '../Buttons/BackButton';
 
 function Verification() {
