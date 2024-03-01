@@ -11,18 +11,10 @@ function MainPage() {
 
   useEffect(() => {
     if (
-      !localStorage.getItem("access_token") ||
-      !localStorage.getItem("refresh_token")
+      !ApiClient().getTokens()
     ) {
       navigate("/");
     }
-    // ApiClient().checkTokens().then(
-    //     () => {
-    //         if (!localStorage.getItem("access_token") || !localStorage.getItem("refresh_token")) {
-    //             navigate("/")
-    //         }
-    //     }
-    // )
   }, [navigate]);
 
   const [isLoading, setIsLoading] = useState(false);

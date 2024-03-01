@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Link, useLocation, useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import styles from "./Verification.module.css"
 import Button from "../Buttons/Button";
 import {ApiClient} from "../../utils/axiosUtils";
@@ -20,7 +20,7 @@ function Verification() {
         } else {
             setErrorMessage("Неверный код")
         }
-        await setIsLoading(false)
+        setIsLoading(false)
     }
 
     useEffect(() => {

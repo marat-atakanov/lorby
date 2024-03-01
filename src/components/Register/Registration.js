@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import hidePasswordIcon from "../../assets/icons/hidePasswordIcon.svg";
 import showPasswordIcon from "../../assets/icons/showPasswordIcon.svg";
 import styles from "./Registration.module.css"
@@ -52,9 +52,6 @@ function Registration() {
     }
     console.log(errors)
 
-    // useEffect(() => {
-    //     validateForm()
-    // }, [validateForm]);
 
 
     return (
@@ -148,10 +145,7 @@ function Registration() {
                     }
                 </div>
                 <p className={styles.errorMessage}>{errorMessage}</p>
-                {/*<Link to={"/verification"} state={{emailValue: values.email}}>*/}
                 <Button type={"submit"} text={"Далее"} margin={"24px 0 0"} isLoading={isLoading}/>
-                {/*<button className={!Object.keys(errors).length ? styles.activeButton : styles.inactiveButton} type="submit">Далее</button>*/}
-                {/*</Link>*/}
             </form>
         </div>
     );

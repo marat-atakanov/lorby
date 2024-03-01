@@ -111,7 +111,7 @@
 .notification {
     /* position: absolute !important; */
     min-height: 54px;
-    border-radius: 12px;
+    border-radius: 12px !important;
     border: 1px solid #EC0000;
     background: #FFF;
     width: 100%;
@@ -125,6 +125,6 @@
 
 @media only screen and (max-width: 550px) {
     .notificationContainer {
-        width: 100%;
+        width: 100% !important;
     }
 }

@@ -4,6 +4,7 @@ import hidePasswordIcon from "../../assets/icons/hidePasswordIcon.svg";
 import showPasswordIcon from "../../assets/icons/showPasswordIcon.svg";
 import { useNavigate } from "react-router-dom";
 import { Slide, toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import { ApiClient } from "../../utils/axiosUtils";
 import Button from "../Buttons/Button";
 
@@ -100,7 +101,6 @@ function Login() {
           isLoading={isLoading}
           margin={"48px 0 0"}
         />
-        {/*<Button type={"button"} onClick={()=>ApiClient().logout()} text={"Выйти"} margin={"48px 0 0"} lightTheme={false}/>*/}
         <Button
           type={"button"}
           onClick={() => navigate("/register")}
