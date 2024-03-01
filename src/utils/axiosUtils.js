@@ -6,13 +6,7 @@ export const baseURL = "https://neobook.online/lorby"
 export const ApiClient = () => {
 
 
-    const tokens = (localStorage.getItem("access_token") && localStorage.getItem("refresh_token"))
-        ?
-        {
-            access_token: localStorage.getItem("access_token"),
-            refresh_token: localStorage.getItem("refresh_token")
-        }
-        : null
+    const tokens = (localStorage.getItem("access_token") && localStorage.getItem("refresh_token")) || null
 
 
     const axiosInstances = axios.create({
@@ -80,9 +74,7 @@ export const ApiClient = () => {
 
     const confirm = async (code) => {
         try {
-            const response = await axiosInstances.post("/authentication/email-confirm/", {code})
-            const data = await response.data
-            console.log(data)
+            await axiosInstances.post("/authentication/email-confirm/", {code})
             return true
         } catch (e) {
             console.log(e)
@@ -92,9 +84,7 @@ export const ApiClient = () => {
 
     const logout = async () => {
         try {
-            const response = await axiosInstances.post("/authentication/logout/", {refresh_token: tokens.refresh_token})
-            let data = await response.data
-            console.log(data)
+            await axiosInstances.post("/authentication/logout/", {refresh_token: tokens.refresh_token})
             localStorage.removeItem("access_token")
             localStorage.removeItem("refresh_token")
             return true

@@ -18,7 +18,7 @@ function Login() {
   };
 
   const notify = () => {
-    toast("Неверный логин или пароль", {
+    return toast("Неверный логин или пароль", {
       position: "top-center",
       autoClose: 1500,
       hideProgressBar: true,

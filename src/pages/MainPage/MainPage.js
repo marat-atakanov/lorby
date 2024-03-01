@@ -64,7 +64,7 @@ function MainPage() {
       >
         <div>
           <h1 className={styles.greeting}>
-            {location.state.oldUser ? "С возвращением!" : "Добро пожаловать!"}
+            {location.state?.oldUser ? "С возвращением!" : "Добро пожаловать!"}
           </h1>
           <p>Lorby - твой личный репетитор</p>
         </div>
